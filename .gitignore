@@ -1,0 +1,21 @@
+# Ignore specific directories
+.objects/
+.project/
+.package/
+.screenshots/
+.settings/
+.storage/.runtime/
+.tmh/
+.templates/
+.entities/
+.local/
+*.dll
+.codedworkflows/
+################################################################################
+# Added by UiPath Studio
+# Prevent caching and local artifacts from being committed
+################################################################################
+.local
+################################################################################
+# End of UiPath Studio common ignores
+################################################################################

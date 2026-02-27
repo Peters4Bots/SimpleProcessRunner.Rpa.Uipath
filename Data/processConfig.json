@@ -1,0 +1,26 @@
+{
+  "generalconfiguration": [
+    {
+      "processname": "IndianaOverheadAdjustmentV1",
+      "triggerurl": "https://cloud.uipath.com/helpathomev2/DefaultTenant/orchestrator_/t/73384145-a860-4e47-8f21-f5b497dc2624/IndianaOverheadAdjustmentV1",
+      "users": ["oajisafe", "aabraham"]
+    },
+    {
+      "processname": "IndianaOverheadAdjustmentV2",
+      "triggerurl": "https://cloud.uipath.com/helpathomev2/DefaultTenant/orchestrator_/t/73384145-a860-4e47-8f21-f5b497dc2624/IndianaOverheadAdjustmentV2",
+      "users": ["oajisafe", "aabraham"]
+    },
+    {
+      "processname": "TimeFilesAlayacareStart",
+      "triggerurl": "https://cloud.uipath.com/helpathomev2/DefaultTenant/orchestrator_/t/73384145-a860-4e47-8f21-f5b497dc2624/TimeFilesAlayacareStart",
+      "users": ["oajisafe", "aabraham"]
+    },
+    {
+      "processname": "TimefilesAlayaCareConclude",
+      "triggerurl": "https://cloud.uipath.com/helpathomev2/DefaultTenant/orchestrator_/t/73384145-a860-4e47-8f21-f5b497dc2624/TimefilesAlayaCareConclude",
+      "users": ["oajisafe", "aabraham"]
+    }
+    
+  ],
+  "adminusers": ["oajisafe", "aabraham"]
+}

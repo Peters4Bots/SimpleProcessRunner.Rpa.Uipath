@@ -1,0 +1,190 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="InitiAllSettings" this:InitiAllSettings.in_ConfigFile="Data\Config.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Path to the configuration file that defines settings, constants and assets." Name="in_ConfigFile" Type="InArgument(x:String)" />
+    <x:Property Name="userName" Type="InArgument(x:String)" />
+    <x:Property Name="config" Type="OutArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1382,2713.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>GetAllSettings_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="92">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="This Invoke Code reads a JSON configuration file from the provided jsonFilePath and builds a dictionary of process names and their corresponding trigger URLs based on the supplied userName. It first validates the file path and username, then parses the JSON using fully qualified Newtonsoft references (so no Imports are required). The logic checks whether the user exists in the adminusers array — if so, all processes are added to the dictionary. If the user is not an admin, only processes where the username appears in the users array are included. The result is returned as a Dictionary(Of String, Object) where the key is the processname and the value is the triggerurl. Any errors encountered during execution are captured and stored in the errorMessage in/out argument for proper handling within the workflow." DisplayName="Initialize All Settings" sap:VirtualizedContainerService.HintSize="832.4000000000001,1340" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="errorMessage" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="This Invoke Code reads a JSON configuration file from the provided jsonFilePath and builds a dictionary of process names and their corresponding trigger URLs based on the supplied userName. It first validates the file path and username, then parses the JSON using fully qualified Newtonsoft references (so no Imports are required). The logic checks whether the user exists in the adminusers array — if so, all processes are added to the dictionary. If the user is not an admin, only processes where the username appears in the users array are included. The result is returned as a Dictionary(Of String, Object) where the key is the processname and the value is the triggerurl. Any errors encountered during execution are captured and stored in the errorMessage in/out argument for proper handling within the workflow." sap:VirtualizedContainerService.HintSize="449.6,1239.2" sap2010:WorkflowViewState.IdRef="Sequence_23">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message (Initialize All Settings)" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Trace" Message="[&quot;Initializing settings...&quot;]" />
+      <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="This Invoke Code reads a JSON configuration file from the provided jsonFilePath and builds a dictionary of process names and their corresponding trigger URLs based on the supplied userName. It first validates the file path and username, then parses the JSON using fully qualified Newtonsoft references (so no Imports are required). The logic checks whether the user exists in the adminusers array — if so, all processes are added to the dictionary. If the user is not an admin, only processes where the username appears in the users array are included. The result is returned as a Dictionary(Of String, Object) where the key is the processname and the value is the triggerurl. Any errors encountered during execution are captured and stored in the errorMessage in/out argument for proper handling within the workflow." Code="Try&#xD;&#xA;    errorMessage = String.Empty&#xD;&#xA;    processConfig = New Dictionary(Of String, Object)(StringComparer.OrdinalIgnoreCase)&#xD;&#xA;&#xD;&#xA;    If String.IsNullOrWhiteSpace(jsonFilePath) Then&#xD;&#xA;        Throw New SystemException(&quot;jsonFilePath is empty.&quot;)&#xD;&#xA;    End If&#xD;&#xA;&#xD;&#xA;    If Not System.IO.File.Exists(jsonFilePath) Then&#xD;&#xA;        Throw New SystemException(&quot;JSON file not found at path: &quot; &amp; jsonFilePath)&#xD;&#xA;    End If&#xD;&#xA;&#xD;&#xA;    If String.IsNullOrWhiteSpace(userName) Then&#xD;&#xA;        Throw New SystemException(&quot;userName is empty.&quot;)&#xD;&#xA;    End If&#xD;&#xA;&#xD;&#xA;    ' Read JSON file&#xD;&#xA;    Dim jsonContent As String = System.IO.File.ReadAllText(jsonFilePath)&#xD;&#xA;&#xD;&#xA;    If String.IsNullOrWhiteSpace(jsonContent) Then&#xD;&#xA;        Throw New SystemException(&quot;JSON file is empty.&quot;)&#xD;&#xA;    End If&#xD;&#xA;&#xD;&#xA;    ' Parse JSON&#xD;&#xA;    Dim root As Newtonsoft.Json.Linq.JObject = Newtonsoft.Json.Linq.JObject.Parse(jsonContent)&#xD;&#xA;&#xD;&#xA;    Dim isAdmin As Boolean = False&#xD;&#xA;    Dim userFound As Boolean = False&#xD;&#xA;&#xD;&#xA;    ' Check admin users&#xD;&#xA;    Dim adminToken As Newtonsoft.Json.Linq.JToken = root.SelectToken(&quot;adminusers&quot;)&#xD;&#xA;&#xD;&#xA;    If adminToken IsNot Nothing AndAlso adminToken.Type = Newtonsoft.Json.Linq.JTokenType.Array Then&#xD;&#xA;        For Each a As Newtonsoft.Json.Linq.JToken In adminToken&#xD;&#xA;            If String.Equals(a.ToString(), userName, StringComparison.OrdinalIgnoreCase) Then&#xD;&#xA;                isAdmin = True&#xD;&#xA;                userFound = True&#xD;&#xA;                Exit For&#xD;&#xA;            End If&#xD;&#xA;        Next&#xD;&#xA;    End If&#xD;&#xA;&#xD;&#xA;    ' Get processes&#xD;&#xA;    Dim generalToken As Newtonsoft.Json.Linq.JToken = root.SelectToken(&quot;generalconfiguration&quot;)&#xD;&#xA;&#xD;&#xA;    If generalToken Is Nothing OrElse generalToken.Type &lt;&gt; Newtonsoft.Json.Linq.JTokenType.Array Then&#xD;&#xA;        Throw New SystemException(&quot;generalconfiguration array not found in JSON.&quot;)&#xD;&#xA;    End If&#xD;&#xA;&#xD;&#xA;    For Each proc As Newtonsoft.Json.Linq.JToken In generalToken&#xD;&#xA;&#xD;&#xA;        Dim processName As String = If(proc.SelectToken(&quot;processname&quot;), &quot;&quot;).ToString().Trim()&#xD;&#xA;        Dim triggerUrl As String = If(proc.SelectToken(&quot;triggerurl&quot;), &quot;&quot;).ToString().Trim()&#xD;&#xA;&#xD;&#xA;        If String.IsNullOrWhiteSpace(processName) OrElse String.IsNullOrWhiteSpace(triggerUrl) Then&#xD;&#xA;            Continue For&#xD;&#xA;        End If&#xD;&#xA;&#xD;&#xA;        Dim includeProcess As Boolean = isAdmin&#xD;&#xA;&#xD;&#xA;        If Not includeProcess Then&#xD;&#xA;            Dim usersToken As Newtonsoft.Json.Linq.JToken = proc.SelectToken(&quot;users&quot;)&#xD;&#xA;&#xD;&#xA;            If usersToken IsNot Nothing AndAlso usersToken.Type = Newtonsoft.Json.Linq.JTokenType.Array Then&#xD;&#xA;                For Each u As Newtonsoft.Json.Linq.JToken In usersToken&#xD;&#xA;                    If String.Equals(u.ToString(), userName, StringComparison.OrdinalIgnoreCase) Then&#xD;&#xA;                        includeProcess = True&#xD;&#xA;                        userFound = True&#xD;&#xA;                        Exit For&#xD;&#xA;                    End If&#xD;&#xA;                Next&#xD;&#xA;            End If&#xD;&#xA;        End If&#xD;&#xA;&#xD;&#xA;        If includeProcess Then&#xD;&#xA;            processConfig(processName) = triggerUrl&#xD;&#xA;        End If&#xD;&#xA;&#xD;&#xA;    Next&#xD;&#xA;&#xD;&#xA;    ' If user never found anywhere → throw exception&#xD;&#xA;    If Not userFound Then&#xD;&#xA;        Throw New SystemException(&quot;User '&quot; &amp; userName &amp; &quot;' not found in configuration.&quot;)&#xD;&#xA;    End If&#xD;&#xA;&#xD;&#xA;Catch ex As Exception&#xD;&#xA;    errorMessage = ex.ToString()&#xD;&#xA;End Try" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,503.2" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+        <ui:InvokeCode.Arguments>
+          <InOutArgument x:TypeArguments="x:String" x:Key="errorMessage">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="errorMessage" />
+          </InOutArgument>
+          <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="processConfig">
+            <VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="config" />
+          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="jsonFilePath">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ConfigFile" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="userName">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="userName" />
+          </InArgument>
+        </ui:InvokeCode.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeCode>
+      <If sap2010:Annotation.AnnotationText="Throw error if code above failed" Condition="[Not String.IsNullOrEmpty(errorMessage)]" sap:VirtualizedContainerService.HintSize="416,88" sap2010:WorkflowViewState.IdRef="If_4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_21">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Throw Exception="[New SystemException(errorMessage)]" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;user config loaded&quot;]" />
+    </Sequence>
+  </Sequence>
+</Activity>
