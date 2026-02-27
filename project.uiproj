@@ -1,6 +1,0 @@
-{
-  "Name": "SimpleProcessRunner",
-  "ProjectType": "Process",
-  "Description": "Starts a process on the orchestrator using orch api triggers",
-  "MainFile": "Main.xaml"
-}
